@@ -18,6 +18,7 @@
     "moment-duration-format": "^2.3.2",
     "node-fetch": "^2.6.0",
     "node-superfetch": "^0.1.10",
+    "os-utils": "0.0.14",
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^3.2.0"
   }

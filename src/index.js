@@ -18,6 +18,7 @@ client.config = require("../config.js");
 const fs = require("fs");
 
 client.commands = new Discord.Collection();
+client.cooldowns = new Discord.Collection();
 
 fs.readdirSync("./cmds/").filter((file) => file.endsWith(".js")).forEach((file) => {
 

@@ -1,6 +1,9 @@
 module.exports = {
     name: "ping",
     alias: ["latency"],
+    category: "Utility",
+    description: "Check the latency of the Discord API and the messages ping.",
+    cooldown: 3,
     run: (client, message) =>{
 
         const pingAPI = Math.floor(client.ws.ping);

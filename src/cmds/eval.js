@@ -1,6 +1,9 @@
 module.exports = {
     name: "eval",
     alias: ["e"],
+    category: "Development",
+    description: "Development command.",
+    cooldown: 3,
     run: async (client, message, args) => {
 
         const Discord = require("discord.js");

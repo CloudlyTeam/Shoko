@@ -1,6 +1,9 @@
 module.exports = {
 	name: "info",
 	alias: ["botinfo", "botstats", "bothelp"],
+    category: "Information",
+    description: "See the information of a member with this command.",
+    cooldown: 5,
 	run: async (client, message, args) => {
 
 		const Discord = require("discord.js");
