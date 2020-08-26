@@ -21,27 +21,16 @@ client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
 
 fs.readdirSync("./cmds/").filter((file) => file.endsWith(".js")).forEach((file) => {
-
     const fileData = require(`./cmds/${file}`);
-
     client.commands.set(fileData.name, fileData);
-
     console.log(`[COMMAND HANDLER] | Command ${file} loaded.`)
-
-    delete require.cache[require.resolve(`./cmds/${file}`)];
-
 });
 
 fs.readdirSync("./events/").filter((file) => file.endsWith(".js")).forEach((file) => {
-
     const fileData = require(`./events/${file}`);
-
     client.on(fileData.name, fileData.event.bind(null, client));
-
     console.log(`[EVENT HANDLER] | Event ${file} loaded.`)
-
     delete require.cache[require.resolve(`./events/${file}`)];
-
 });
 
 client.login(client.config.token);
